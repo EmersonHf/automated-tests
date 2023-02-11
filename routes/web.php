@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,7 @@ Route::middleware('is_admin')->group(function(){
 
     Route::resource('categories',CategoryController::class);
 });
+Route::resource('posts',PostController::class);
 require __DIR__.'/auth.php';
 
 
